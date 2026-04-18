@@ -1,6 +1,6 @@
 {
   "name": "lc",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,6 +12,7 @@
     "preview": "vp preview"
   },
   "devDependencies": {
+    "@iconify/svelte": "^5.2.1",
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/kit": "^2.57.1",
     "@sveltejs/vite-plugin-svelte": "^7.0.0",

@@ -56,6 +56,8 @@ These rules are strict.
 ### General CSS Expectations
 
 - Prefer the most recent stable CSS features supported by current evergreen browsers.
+- Default browser support target is current Chrome, Firefox, and Safari on desktop and mobile.
+- Treat Baseline availability and https://caniuse.com/ as the compatibility reference before deciding whether a modern feature can be used without fallback.
 - Treat modern CSS as the default approach, not as an optional enhancement.
 - Prefer native CSS solutions over JavaScript for layout, spacing, responsiveness, interaction states, and visual behavior whenever possible.
 - Keep CSS readable, intentional, and easy to override.
@@ -64,17 +66,22 @@ These rules are strict.
 ### Modern CSS Requirements
 
 - Prefer and actively use modern CSS selectors such as `:where()`, `:is()`, and `:has()` when they improve clarity, reduce specificity, or better express relationships.
+- Prefer native CSS nesting whenever it improves readability and keeps related rules colocated.
 - Use logical properties such as `margin-block`, `padding-inline`, `inline-size`, `block-size`, `min-block-size`, and similar logical equivalents whenever possible.
 - Use `@supports` for progressive enhancement and fallbacks when a newer feature may need guarded behavior.
 - Use CSS variables for colors, spacing, radii, typography values, sizing tokens, and timing values whenever those values are part of repeated design logic.
 - Use container queries and media queries with a mobile-first approach when responsive behavior depends on viewport size or container size.
 - Use modern CSS functions and capabilities where appropriate, such as `clamp()`, `min()`, `max()`, `color-mix()`, `text-wrap`, `accent-color`, `field-sizing`, `:focus-visible`, and similar stable features.
+- Before adopting or rejecting modern CSS or web platform features, verify real-world support on https://caniuse.com/ for the project target browsers.
 
 ### Specificity and Selector Strategy
 
 - For reset files, base styles, and global stylesheets, prefer `:where()` for broad targeting so specificity remains minimal.
 - Use `:is()` to group repeated element categories when it improves readability and reduces duplication.
 - Use `:has()` only when it expresses a meaningful structural or state relationship and is justified by the stylesheet purpose.
+- Prefer structural selectors, pseudo-classes, and nesting over classes and ids when they can express the same intent clearly.
+- Keep classes and ids to the strict minimum. Add them only when there is no equivalent low-noise alternative.
+- Use ids for semantics and accessibility wiring when necessary (for example `aria-controls` relationships), not as default styling hooks.
 - Do not increase specificity unnecessarily.
 - When a lower-specificity solution exists and is suitable, prefer it.
 

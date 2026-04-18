@@ -1,3 +1,188 @@
+<script lang="ts">
+  import logo from '$lib/assets/images/Logo.jpg';
+  import Icon from '@iconify/svelte';
+  import ColorSchemeToggle from './ColorSchemeToggle.svelte';
+  import LocaleSelect from './LocaleSelect.svelte';
+
+  let menuOpen = $state(false);
+  const desktopQuery = '(min-width: 60rem)';
+
+  const onclick = () => {
+    document.startViewTransition(() => {
+      menuOpen = !menuOpen;
+    });
+  };
+
+  const onLinkClick = () => {
+    if (menuOpen) {
+      document.startViewTransition(() => {
+        menuOpen = false;
+      });
+    }
+  };
+
+  const links: { href: string; label: string }[] = [
+    { href: '#hero', label: 'Inicio' },
+    { href: '#bio', label: 'Biografía' },
+    { href: '#band', label: 'La Banda' },
+    { href: '#media', label: 'Medios' },
+    { href: '#contact', label: 'Contactos' },
+  ] as const;
+  
+  $effect(() => {
+    if (typeof window === 'undefined') return;
+    
+    const closeIfDesktop = () => {
+      if (mql.matches && menuOpen) {
+        menuOpen = false;
+      }
+    };
+
+    const mql = window.matchMedia(desktopQuery);
+
+    closeIfDesktop();
+    mql.addEventListener('change', closeIfDesktop);
+
+    return () => {
+      mql.removeEventListener('change', closeIfDesktop);
+    };
+  });
+</script>
+
 <header>
-  Header
+  <a href="#hero" onclick={onLinkClick}>
+    <img src={logo} alt="Los Compits logo" />
+  </a>
+
+  <nav id="site-nav">
+    <ul>
+      {#each links as { href, label } (href)}
+        <li><a href={href} onclick={onLinkClick}>{label}</a></li>
+      {/each}
+    </ul>
+  </nav>
+  
+  <div>
+    <ColorSchemeToggle />
+    <LocaleSelect />
+  </div>
+
+  <button 
+    {onclick} 
+    aria-expanded={menuOpen}
+    aria-controls="site-nav"
+    aria-label={menuOpen ? 'Cerrar el menú de navegación' : 'Abrir el menú de navegación'}
+  >
+    {#if !menuOpen}
+      <Icon icon="mdi:menu" width="24" height="24" />
+    {:else}
+      <Icon icon="mdi:close" width="24" height="24" />
+    {/if}
+  </button>
 </header>
+
+<style>
+  header {
+    container: header / inline-size;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "brand spacer options toggle";
+    place-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    > a:first-child {
+      grid-area: brand;
+      z-index: 15;
+
+      img {
+        block-size: 80px;
+        border-radius: 999px;
+      }
+    }
+
+    nav {
+      position: fixed;
+      inset: 0;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 10;
+      transition:
+        transform 300ms ease,
+        opacity 250ms ease,
+        visibility 0ms linear 300ms;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        block-size: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &:has(> button[aria-expanded='true']) {
+      nav {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition:
+          transform 300ms ease,
+          opacity 250ms ease,
+          visibility 0ms linear 0ms;
+      }
+    }
+
+    > div {
+      grid-area: options;
+      display: flex;
+      align-items: center;
+      z-index: 15;
+    }
+
+    > button {
+      grid-area: toggle;
+      justify-self: end;
+      z-index: 15;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    nav {
+      transition: none;
+    }
+  }
+
+  @container header (width >= 60rem) {
+    header {
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: "brand nav options";
+
+      nav {
+        position: static;
+        inset: auto;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: none;
+
+        ul {
+          flex-direction: row;
+          block-size: auto;
+        }
+      }
+
+      > button {
+        display: none;
+      }
+    }
+  }
+</style>
