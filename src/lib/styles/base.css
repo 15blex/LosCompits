@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("../assets/fonts/Caveat.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-white: oklch(1 0 0);
+  --color-black: oklch(0 0 0);
+}
+
+body {
+  min-block-size: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  container: content / inline-size;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Caveat";
+}

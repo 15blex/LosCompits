@@ -1,21 +1,21 @@
 <script lang="ts">
   import logo from '$lib/assets/images/Logo.jpg';
+  import { startViewTransition } from '$lib/utils';
   import Icon from '@iconify/svelte';
   import ColorSchemeToggle from './ColorSchemeToggle.svelte';
   import LocaleSelect from './LocaleSelect.svelte';
-
   let menuOpen = $state(false);
-  const desktopQuery = '(min-width: 60rem)';
+  const desktopQuery = '(min-width: 64rem)';
 
   const onclick = () => {
-    document.startViewTransition(() => {
+    startViewTransition(() => {
       menuOpen = !menuOpen;
     });
   };
 
   const onLinkClick = () => {
     if (menuOpen) {
-      document.startViewTransition(() => {
+      startViewTransition(() => {
         menuOpen = false;
       });
     }
@@ -98,7 +98,7 @@
 
       img {
         block-size: 80px;
-        border-radius: 999px;
+        border-radius: 100%;
       }
     }
 
@@ -122,8 +122,6 @@
         justify-content: center;
         align-items: center;
         list-style: none;
-        margin: 0;
-        padding: 0;
       }
     }
 
@@ -160,7 +158,7 @@
     }
   }
 
-  @container header (width >= 60rem) {
+  @container header (width >= 64rem) {
     header {
       grid-template-columns: auto 1fr auto;
       grid-template-areas: "brand nav options";
@@ -176,7 +174,6 @@
 
         ul {
           flex-direction: row;
-          block-size: auto;
         }
       }
 

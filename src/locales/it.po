@@ -1,0 +1,218 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+"Source-Language: es\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/routes/+layout.svelte
+msgid "Los Compits | Cumbia, Salsa y Son Cubano en Barcelona"
+msgstr ""
+
+#: src/routes/+layout.svelte
+msgid "Grupo de músicos de Barcelona que interpreta cumbia, salsa y son cubano para eventos, calles y celebraciones."
+msgstr ""
+
+#: src/lib/components/Band.svelte
+#: src/lib/components/Hero.svelte
+#: src/routes/+layout.svelte
+#: src/routes/+layout.svelte
+msgid "Los Compits"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "La Banda"
+msgstr ""
+
+#: src/lib/components/Bio.svelte
+#: src/lib/components/Header.svelte
+msgid "Biografía"
+msgstr ""
+
+#: src/lib/components/ColorSchemeToggle.svelte
+msgid "Toggle color scheme"
+msgstr ""
+
+#~ msgid "© 2026 Los Compits. Todos los derechos reservados."
+#~ msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Inicio"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+#: src/lib/components/Media.svelte
+msgid "Medios"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Contactos"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Los Compits logo"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Cerrar el menú de navegación"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Abrir el menú de navegación"
+msgstr ""
+
+#: src/lib/components/Hero.svelte
+msgid "Cumbia, Salsa y Son Cubano"
+msgstr ""
+
+#: src/lib/components/LocaleSelect.svelte
+msgid "Español"
+msgstr ""
+
+#: src/lib/components/LocaleSelect.svelte
+msgid "Català"
+msgstr ""
+
+#: src/lib/components/LocaleSelect.svelte
+msgid "Italiano"
+msgstr ""
+
+#: src/lib/components/LocaleSelect.svelte
+msgid "Français"
+msgstr ""
+
+#: src/lib/components/LocaleSelect.svelte
+msgid "Deutsch"
+msgstr ""
+
+#: src/lib/components/LocaleSelect.svelte
+msgid "English"
+msgstr ""
+
+#: src/lib/components/LocaleSelect.svelte
+msgid "Idiomma"
+msgstr ""
+
+#: src/lib/components/LocaleSelect.svelte
+#: src/lib/components/LocaleSelect.svelte
+msgid "Selecciona el idioma"
+msgstr ""
+
+#: src/lib/components/Bio.svelte
+msgid "Este grupo se forma en las calles de Barcelona trasladando cada uno de sus integrantes el sabor de sus tierras lanzando un mensaje de alegria y igualdad que no dejará indiferente a nadie."
+msgstr ""
+
+#: src/lib/components/Bio.svelte
+msgid "El nombre de la banda define el carnalismo amistad y buena onda que representan siendo de diferentes partes del mundo y sin tener lazos de sangre (los compit’s) nos harán bailar y olvodarnos de los prejuicios que envuelven este mundo."
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Nuestros Contactos"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "¿Quieres que toquemos en tu evento?"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Estamos listos para llevar la magia de Los Compits a tu próxima celebración."
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "<0/> Email: <1>info@loscompits.com</1>"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "<0/> Teléfono: <1/>"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Facebook"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Instagram"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "<0/> Redes sociales: <1/>"
+msgstr ""
+
+#~ msgid "Copyright © 2024 Los Compits. Todos los derechos reservados."
+#~ msgstr ""
+
+#~ msgid "Hecho con <0/> y <1/> por Los Compits"
+#~ msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Omar Alejandro Ramos Narváez"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+#: src/lib/components/Band.svelte
+msgid "Percusiones, Voz"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Colombia"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Facundo López"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+#: src/lib/components/Band.svelte
+msgid "Argentina"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Ricardo Garcia Gutierrez"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+#: src/lib/components/Band.svelte
+msgid "Trompeta"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Lucas Raiquen Pereyra"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+#: src/lib/components/Band.svelte
+msgid "Mexico"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Abraham Ruvalcaba"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Guitarra, Voz"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Brazil"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Lalo Abbadié"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Contrabajo, Voz"
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Los Compits es una banda de cumbia, salsa y son cubano con sede en Barcelona. Fundada en 2024, la banda se ha ganado un lugar destacado en la escena musical local gracias a su energía contagiosa y su habilidad para fusionar ritmos tradicionales con un toque moderno."
+msgstr ""
+
+#~ msgid "Copyright © 2024 Los Compits. Todos los derechos reservados. Hecho con <0/> y <1/> por Los Compits"
+#~ msgstr ""
+
+#: src/lib/components/Footer.svelte
+msgid "Copyright © 2024 Los Compits. Todos los derechos reservados. <0/> Hecho con <1/> y <2/> por Los Compits"
+msgstr ""

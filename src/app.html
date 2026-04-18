@@ -4,6 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="text-scale" content="scale" />
+    <script>
+      (() => {
+        const localeStorageKey = "compits_locale";
+        const colorSchemeStorageKey = "compits_colorScheme";
+        const locales = new Set(["es", "cat", "it", "de", "fr", "en"]);
+        const colorSchemes = new Set(["light", "dark"]);
+
+        try {
+          const storedLocale = localStorage.getItem(localeStorageKey);
+          if (storedLocale && locales.has(storedLocale)) {
+            document.documentElement.lang = storedLocale;
+          }
+
+          const storedColorScheme = localStorage.getItem(colorSchemeStorageKey);
+          if (storedColorScheme && colorSchemes.has(storedColorScheme)) {
+            document.documentElement.style.colorScheme = storedColorScheme;
+          }
+        } catch {}
+      })();
+    </script>
     %sveltekit.head%
     <script type="application/ld+json">
       {

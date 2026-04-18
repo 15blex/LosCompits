@@ -8,6 +8,8 @@ declare global {
     // interface PageState {}
     // interface Platform {}
   }
+  type Locale = "es" | "cat" | "it" | "fr" | "de" | "en";
+  type ColorScheme = "light" | "dark";
 }
 
-export {};
+export { ColorScheme, Locale };

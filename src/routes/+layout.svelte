@@ -1,6 +1,8 @@
 <script lang="ts">
     import favicon from '$lib/assets/icons/favicon.svg';
+    import { preferences } from '$lib/preferences.svelte';
     import "$lib/styles/index.css";
+    import { onMount } from 'svelte';
 
     let { children } = $props();
 
@@ -8,6 +10,10 @@
     const pageDescription =
         'Grupo de músicos de Barcelona que interpreta cumbia, salsa y son cubano para eventos, calles y celebraciones.';
     const siteUrl = 'https://www.loscompits.es/';
+
+    onMount(() => {
+        void preferences.initialize();
+    });
 </script>
 
 <svelte:head>

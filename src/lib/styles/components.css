@@ -1,0 +1,30 @@
+select {
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+
+  &,
+  &::picker(select) {
+    appearance: base-select;
+  }
+
+  &::picker-icon {
+    display: none;
+  }
+
+  option {
+    display: flex;
+    align-items: center;
+
+    &::checkmark {
+      display: none;
+    }
+  }
+
+  button svg {
+    width: 24px;
+    aspect-ratio: 1 / 1;
+  }
+}

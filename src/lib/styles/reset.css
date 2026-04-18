@@ -8,6 +8,7 @@
   overflow-wrap: break-word;
   interpolate-size: allow-keywords;
   accent-color: currentColor;
+  color-scheme: light dark;
 }
 
 :where(*, *::before, *::after) {
@@ -20,7 +21,6 @@
 :where(html) {
   block-size: 100%;
   scroll-behavior: smooth;
-  color-scheme: light;
   text-size-adjust: none;
   tab-size: 4;
   -moz-tab-size: 4;
@@ -57,6 +57,12 @@
   background-size: cover;
   font-style: italic;
   shape-margin: 1rem;
+}
+
+:where(svg) {
+  display: inline;
+  vertical-align: middle;
+  fill: currentColor;
 }
 
 :where(input, button, textarea, select) {
