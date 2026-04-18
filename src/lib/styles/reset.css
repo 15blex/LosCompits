@@ -1,0 +1,135 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-wrap: break-word;
+  interpolate-size: allow-keywords;
+  accent-color: currentColor;
+}
+
+:where(*, *::before, *::after) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-inline-size: 0;
+}
+
+:where(html) {
+  block-size: 100%;
+  scroll-behavior: smooth;
+  color-scheme: light;
+  text-size-adjust: none;
+  tab-size: 4;
+  -moz-tab-size: 4;
+}
+
+:where(body) {
+  min-block-size: 100%;
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+}
+
+:where(body, h1, h2, h3, h4, h5, h6, p, li, figcaption) {
+  text-wrap: pretty;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+:where(ul, ol)[class],
+:where(menu)[class] {
+  list-style: none;
+}
+
+:where(img, picture, svg, video, canvas) {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:where(img, picture, video, canvas) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-style: italic;
+  shape-margin: 1rem;
+}
+
+:where(input, button, textarea, select) {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+:where(button, [type="button"], [type="reset"], [type="submit"]) {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+:where(textarea) {
+  resize: vertical;
+}
+
+:where(textarea:not([rows])) {
+  min-block-size: 10em;
+}
+
+:where(table) {
+  border-collapse: collapse;
+  border-spacing: 0;
+  inline-size: 100%;
+  text-indent: 0;
+}
+
+:where(fieldset) {
+  border: 0;
+  min-inline-size: 0;
+}
+
+:where(a:not([class])) {
+  color: currentColor;
+  text-decoration-skip-ink: auto;
+}
+
+:where(:target) {
+  scroll-margin-block: 5rlh;
+}
+
+:where([hidden]:not([hidden="until-found"])) {
+  display: none !important;
+}
+
+:where(dialog) {
+  max-inline-size: calc(100% - 2rem);
+  max-block-size: calc(100% - 2rem);
+  margin: auto;
+}
+
+:where(:focus-visible) {
+  outline: 2px solid currentColor;
+  outline-offset: 0.2rem;
+}
+
+@supports selector(::backdrop) {
+  :where(dialog)::backdrop {
+    background: rgb(0 0 0 / 0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(html) {
+    scroll-behavior: auto;
+  }
+
+  :where(*, *::before, *::after) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
