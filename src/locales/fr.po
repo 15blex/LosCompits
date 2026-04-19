@@ -143,8 +143,9 @@ msgstr ""
 #~ msgid "Copyright © 2024 Los Compits. Todos los derechos reservados."
 #~ msgstr ""
 
-#~ msgid "Hecho con <0/> y <1/> por Los Compits"
-#~ msgstr ""
+#: src/lib/components/Footer.svelte
+msgid "Hecho con <0/> y <1/> por Los Compits"
+msgstr ""
 
 #: src/lib/components/Band.svelte
 msgid "Omar Alejandro Ramos Narváez"
@@ -213,6 +214,56 @@ msgstr ""
 #~ msgid "Copyright © 2024 Los Compits. Todos los derechos reservados. Hecho con <0/> y <1/> por Los Compits"
 #~ msgstr ""
 
+#~ msgid "Copyright © 2024 Los Compits. Todos los derechos reservados. <0/> Hecho con <1/> y <2/> por Los Compits"
+#~ msgstr ""
+
 #: src/lib/components/Footer.svelte
-msgid "Copyright © 2024 Los Compits. Todos los derechos reservados. <0/> Hecho con <1/> y <2/> por Los Compits"
+msgid "Los Compits · Barcelona"
+msgstr ""
+
+#: src/lib/components/Footer.svelte
+msgid "Ritmo callejero con alma latina"
+msgstr ""
+
+#: src/lib/components/Footer.svelte
+msgid "Nacidos entre plazas y calles de Barcelona, llevamos cumbia, salsa y son cubano a festivales, vermuts, celebraciones y eventos que piden cercanía, baile y carácter."
+msgstr ""
+
+#~ msgid "Enlaces del sitio"
+#~ msgstr ""
+
+#~ msgid "Explorar"
+#~ msgstr ""
+
+#~ msgid "La banda"
+#~ msgstr ""
+
+#~ msgid "Contacto"
+#~ msgstr ""
+
+#~ msgid "Contratación y contacto"
+#~ msgstr ""
+
+#~ msgid "Barcelona, calle, escenario y fiesta popular"
+#~ msgstr ""
+
+#~ msgid "info@loscompits.com"
+#~ msgstr ""
+
+#~ msgid "Redes sociales"
+#~ msgstr ""
+
+#. 0: currentYear
+#: src/lib/components/Footer.svelte
+msgid "© {0} Los Compits. Música nacida en las calles de Barcelona."
+msgstr ""
+
+#~ msgid "Redes sociales y cierre legal"
+#~ msgstr ""
+
+#~ msgid "Cierre legal"
+#~ msgstr ""
+
+#: src/lib/components/Footer.svelte
+msgid "Cierre legal y créditos"
 msgstr ""

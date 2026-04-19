@@ -27,8 +27,14 @@ main {
 }
 
 footer {
+  background: var(--shell-footer-surface);
+  border-block-start: 1px solid var(--shell-footer-border);
   padding-inline: var(--space-page-inline);
   padding-block: var(--space-2xs);
+
+  p {
+    color: var(--shell-footer-text-muted);
+  }
 
   svg {
     color: var(--shell-footer-accent);
