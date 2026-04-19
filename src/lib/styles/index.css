@@ -1,5 +1,6 @@
-@layer reset, base, components;
+@layer reset, base, typography, components;
 
 @import "./reset.css" layer(reset);
 @import "./base.css" layer(base);
+@import "./typography.css" layer(typography);
 @import "./components.css" layer(components);

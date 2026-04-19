@@ -1,3 +1,26 @@
+header {
+  padding-inline: var(--space-page-inline);
+  padding-block: var(--space-2xs);
+
+  ul {
+    gap: var(--space-nav-gap);
+  }
+}
+
+main {
+  container: content / inline-size;
+
+  > * {
+    padding-inline: var(--space-page-inline);
+    padding-block: var(--space-section-block-tight);
+  }
+}
+
+footer {
+  padding-inline: var(--space-page-inline);
+  padding-block: var(--space-2xs);
+}
+
 select {
   display: grid;
   place-content: center;

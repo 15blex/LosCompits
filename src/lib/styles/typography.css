@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("../assets/fonts/Caveat.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Families */
+  --font-family-body: system-ui, sans-serif;
+  --font-family-display: "Caveat", cursive;
+
+  /* Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Primitive fluid type scale */
+  --font-size-2xs: clamp(0.75rem, 0.74rem + 0.05vw, 0.8125rem);
+  --font-size-xs: clamp(0.875rem, 0.86rem + 0.08vw, 0.9375rem);
+  --font-size-s: clamp(1rem, 0.98rem + 0.12vw, 1.0625rem);
+  --font-size-m: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
+  --font-size-l: clamp(1.25rem, 1.15rem + 0.45vw, 1.5rem);
+  --font-size-xl: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+  --font-size-2xl: clamp(2rem, 1.55rem + 1.8vw, 3rem);
+  --font-size-3xl: clamp(2.75rem, 2rem + 3vw, 4.75rem);
+
+  /* Semantic aliases */
+  --font-size-body: var(--font-size-s);
+  --font-size-small: var(--font-size-xs);
+  --font-size-lead: var(--font-size-m);
+
+  --font-size-heading-sm: var(--font-size-l);
+  --font-size-heading: var(--font-size-xl);
+  --font-size-display: var(--font-size-3xl);
+
+  --line-height-tight: 1.05;
+  --line-height-heading: 1.1;
+  --line-height-body: 1.5;
+  --line-height-loose: 1.7;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+}
+
+:where(body) {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+:where(small) {
+  font-size: var(--font-size-small);
+}
+
+:where(h1, h2, h3) {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+:where(h1) {
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-tight);
+}
+
+:where(h2) {
+  font-size: var(--font-size-heading);
+}
+
+:where(h3) {
+  font-size: var(--font-size-heading-sm);
+}
+
+:where(p, li, dd, dt, blockquote) {
+  font-size: var(--font-size-body);
+}
+
+:where(input, button, textarea, select) {
+  font: inherit;
+}

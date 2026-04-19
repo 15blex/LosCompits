@@ -1,4 +1,4 @@
-export const startViewTransition = (cb: () => void) => {
+export const startViewTransition = (cb: () => void): void => {
   if (!document.startViewTransition) {
     cb();
     return;
