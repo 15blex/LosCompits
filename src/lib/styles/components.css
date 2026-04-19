@@ -5,6 +5,16 @@ header {
   ul {
     gap: var(--space-nav-gap);
   }
+
+  :where(button, select) {
+    color: var(--shell-header-control);
+    transition:
+      color 180ms ease,
+      background-color 180ms ease;
+    &:is(:hover, :focus-visible) {
+      color: var(--shell-header-control-hover);
+    }
+  }
 }
 
 main {

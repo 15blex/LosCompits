@@ -17,12 +17,24 @@
 
 <style>
   button {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    transition: background 0.3s, color 0.3s, border 0.3s;
+    inline-size: 40px;
+    block-size: 40px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    color: var(--shell-header-control);
+    background: var(--shell-header-control-surface);
+    border: 2px solid var(--shell-header-control-border);
+    border-radius: 999px;
+    transition:
+      color 180ms ease,
+      background-color 180ms ease,
+      border-color 180ms ease;
+   
+    &:is(:hover, :focus-visible) {
+      color: var(--shell-header-control-hover);
+      border-color: var(--shell-header-control-border-hover);
+    }
   }
+
 </style>

@@ -35,13 +35,34 @@
 <style>
   @supports selector(select::picker(select)) {
     select {
-      width: 24px;
-      height: 24px;
+      inline-size: 40px;
+      block-size: 40px;
       display: grid;
       place-items: center;
       padding: 0;
-      background: none;
-      transition: border 0.3s;
+      color: var(--shell-header-control);
+      background: var(--shell-header-control-surface);
+      border: 2px solid var(--shell-header-control-border);
+      border-radius: 999px;
+      transition:
+        color 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease;
+      
+      &:is(:hover, :focus-visible) {
+        color: var(--shell-header-control-hover);
+        border-color: var(--shell-header-control-border-hover);
+      }
+      
+      button {
+        inline-size: 100%;
+        block-size: 100%;
+        display: grid;
+        place-items: center;
+        padding: 0;
+      }
     }
+
   }
 </style>

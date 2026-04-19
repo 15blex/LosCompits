@@ -4,6 +4,7 @@
   import Icon from '@iconify/svelte';
   import ColorSchemeToggle from './ColorSchemeToggle.svelte';
   import LocaleSelect from './LocaleSelect.svelte';
+
   let menuOpen = $state(false);
   const desktopQuery = '(min-width: 64rem)';
 
@@ -88,6 +89,7 @@
   header {
     container: header / inline-size;
     background: transparent;
+    color: var(--shell-header-text);
     border-block-end: 1px solid var(--shell-header-border);
     box-shadow: var(--shell-header-shadow);
     display: grid;
@@ -110,7 +112,6 @@
     }
 
     nav {
-      background: var(--shell-header-surface-solid);
       position: fixed;
       inset: 0;
       transform: translateY(-100%);
@@ -131,6 +132,15 @@
         align-items: center;
         list-style: none;
       }
+
+      a {
+        color: var(--shell-header-link);
+        transition: color 180ms ease;
+        
+        &:is(:hover, :focus-visible) {
+          color: var(--shell-header-link-hover);
+        }
+      }
     }
 
     &::before {
@@ -144,6 +154,7 @@
 
     &:has(> button[aria-expanded='true']) {
       nav {
+        background: var(--shell-header-surface-solid);
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
@@ -158,14 +169,33 @@
     > div {
       grid-area: options;
       display: flex;
+      gap: var(--space-nav-gap);
       align-items: center;
       z-index: 15;
     }
 
     > button {
+      margin-inline-start: var(--space-nav-gap);
       grid-area: toggle;
       justify-self: end;
       z-index: 15;
+      inline-size: 40px;
+      block-size: 40px;
+      display: grid;
+      place-items: center;
+      color: var(--shell-header-control);
+      background: var(--shell-header-control-surface);
+      border: 2px solid var(--shell-header-control-border);
+      border-radius: 999px;
+      transition:
+        color 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease;
+      
+      &:is(:hover, :focus-visible) {
+        color: var(--shell-header-control-hover);
+        border-color: var(--shell-header-control-border-hover);
+      }
     }
   }
 

@@ -41,6 +41,13 @@
   --color-night-900: oklch(26% 0.03 260);
   --color-night-950: oklch(18% 0.025 260);
 
+  --color-earth-100: oklch(94% 0.02 82);
+  --color-earth-200: oklch(88% 0.035 74);
+  --color-earth-400: oklch(72% 0.06 62);
+  --color-earth-600: oklch(52% 0.07 50);
+  --color-earth-800: oklch(34% 0.045 45);
+  --color-earth-900: oklch(24% 0.03 42);
+
   /* Theme bridge: utile ora, prima dei token semantici */
   --color-paper: light-dark(var(--color-sand-50), oklch(22% 0.02 85));
   --color-panel: light-dark(var(--color-sand-100), var(--color-night-900));
@@ -94,18 +101,28 @@
   --accent-support: light-dark(var(--color-leaf-500), var(--color-sea-400));
   accent-color: var(--accent);
 
-  /* Effects */
-  --effect-blur-header: 8px;
-  --effect-saturate-header: 180%;
-
   /* Header chrome */
-  --shell-header-surface-solid: light-dark(oklch(96.3% 0.022 82 / 1), oklch(21% 0.02 260 / 1));
-  --shell-header-surface: light-dark(oklch(96.3% 0.022 82 / 0.8), oklch(21% 0.02 260 / 0.8));
-  --shell-header-border: light-dark(oklch(85% 0.026 78 / 0.9), oklch(42% 0.018 260 / 0.9));
-  --shell-header-shadow: 0 0 1rem oklch(0% 0 0 / 0.5);
-  --shell-header-text: var(--text-primary);
-  --shell-header-link-hover: var(--accent-strong);
-  --shell-header-control-hover: var(--accent-soft);
+  --shell-header-surface-solid: light-dark(var(--color-earth-200), var(--color-earth-900));
+  --shell-header-surface: light-dark(
+    oklch(from var(--color-earth-200) l c h / 0.82),
+    oklch(from var(--color-earth-900) l c h / 0.84)
+  );
+  --shell-header-border: light-dark(var(--color-earth-400), var(--color-earth-800));
+  --shell-header-shadow: 0 0 1rem oklch(0% 0 0 / 0.75);
+  --shell-header-text: light-dark(oklch(28% 0.028 48), oklch(94% 0.012 84));
+  --shell-header-link: var(--shell-header-text);
+  --shell-header-control: var(--shell-header-text);
+  --shell-header-link-hover: light-dark(var(--color-guava-600), var(--color-sun-400));
+  --shell-header-control-hover: light-dark(
+    color-mix(in oklch, var(--shell-header-text) 82%, black),
+    color-mix(in oklch, var(--shell-header-text) 86%, white)
+  );
+  --shell-header-control-surface: light-dark(
+    oklch(from var(--color-earth-100) l c h / 0.68),
+    oklch(from var(--color-earth-800) l c h / 0.52)
+  );
+  --shell-header-control-border: light-dark(var(--color-earth-400), var(--color-earth-600));
+  --shell-header-control-border-hover: light-dark(var(--color-guava-500), var(--color-sun-400));
 
   /* Footer chrome */
   --shell-footer-surface: light-dark(var(--surface-inverse), oklch(16% 0.02 260));
