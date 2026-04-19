@@ -8,6 +8,7 @@
   const desktopQuery = '(min-width: 64rem)';
 
   const onclick = () => {
+    document.body.style.overflow = menuOpen ? '' : 'hidden';
     startViewTransition(() => {
       menuOpen = !menuOpen;
     });
@@ -15,6 +16,7 @@
 
   const onLinkClick = () => {
     if (menuOpen) {
+      document.body.style.overflow = '';
       startViewTransition(() => {
         menuOpen = false;
       });
@@ -35,6 +37,7 @@
     const closeIfDesktop = () => {
       if (mql.matches && menuOpen) {
         menuOpen = false;
+        document.body.style.overflow = '';  
       }
     };
 
@@ -84,11 +87,15 @@
 <style>
   header {
     container: header / inline-size;
+    background: transparent;
+    border-block-end: 1px solid var(--shell-header-border);
+    box-shadow: var(--shell-header-shadow);
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     grid-template-areas: "brand spacer options toggle";
     place-items: center;
     position: sticky;
+    isolation: isolate;
     top: 0;
     z-index: 5;
 
@@ -103,6 +110,7 @@
     }
 
     nav {
+      background: var(--shell-header-surface-solid);
       position: fixed;
       inset: 0;
       transform: translateY(-100%);
@@ -123,6 +131,15 @@
         align-items: center;
         list-style: none;
       }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--shell-header-surface);
+      backdrop-filter: blur(4px);
+      z-index: 5;
     }
 
     &:has(> button[aria-expanded='true']) {

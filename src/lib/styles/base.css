@@ -10,6 +10,43 @@
   --space-2xl: clamp(4rem, 3.2rem + 2.8vw, 6rem);
   --space-3xl: clamp(5rem, 4rem + 3.5vw, 7.5rem);
 
+  /* Warm neutrals */
+  --color-sand-50: oklch(98% 0.012 95);
+  --color-sand-100: oklch(95% 0.018 95);
+  --color-sand-200: oklch(90% 0.025 88);
+
+  /* Vibrant accents */
+  --color-sun-400: oklch(84% 0.16 96);
+  --color-sun-500: oklch(78% 0.18 92);
+  --color-sun-600: oklch(69% 0.16 86);
+
+  --color-mango-400: oklch(80% 0.17 72);
+  --color-mango-500: oklch(73% 0.19 58);
+  --color-mango-600: oklch(64% 0.18 48);
+
+  --color-guava-400: oklch(78% 0.14 35);
+  --color-guava-500: oklch(70% 0.18 25);
+  --color-guava-600: oklch(60% 0.17 20);
+
+  --color-leaf-400: oklch(80% 0.14 150);
+  --color-leaf-500: oklch(72% 0.17 148);
+  --color-leaf-600: oklch(62% 0.15 145);
+
+  --color-sea-400: oklch(78% 0.11 205);
+  --color-sea-500: oklch(69% 0.13 220);
+  --color-sea-600: oklch(58% 0.12 230);
+
+  --color-night-400: oklch(60% 0.12 285);
+  --color-night-500: oklch(50% 0.13 282);
+  --color-night-900: oklch(26% 0.03 260);
+  --color-night-950: oklch(18% 0.025 260);
+
+  /* Theme bridge: utile ora, prima dei token semantici */
+  --color-paper: light-dark(var(--color-sand-50), oklch(22% 0.02 85));
+  --color-panel: light-dark(var(--color-sand-100), var(--color-night-900));
+  --color-ink: light-dark(oklch(24% 0.028 258), oklch(95% 0.015 95));
+  --color-accent-ui: light-dark(var(--color-guava-500), var(--color-sun-400));
+
   /* Semantic spacing aliases */
   --space-page-inline: var(--space-s);
   --space-page-inline-wide: var(--space-m);
@@ -25,6 +62,64 @@
   --space-nav-gap: var(--space-s);
   --space-card-padding: var(--space-s);
   --space-surface-padding: var(--space-m);
+
+  /* Surfaces */
+  --surface-page: var(--color-paper);
+  --surface-section: light-dark(var(--color-sand-100), oklch(28% 0.018 258));
+  --surface-elevated: var(--color-panel);
+  --surface-overlay: light-dark(oklch(98% 0.01 95 / 0.9), oklch(18% 0.02 260 / 0.88));
+  --surface-inverse: light-dark(var(--color-night-900), var(--color-sand-100));
+
+  /* Text */
+  --text-primary: var(--color-ink);
+  --text-muted: light-dark(oklch(46% 0.02 260), oklch(80% 0.014 95));
+  --text-soft: light-dark(oklch(58% 0.016 260), oklch(70% 0.012 95));
+  --text-inverse: light-dark(var(--color-sand-50), var(--color-night-950));
+  --text-on-media: oklch(98% 0.01 95);
+  --text-on-accent: var(--color-sand-50);
+  --text-on-accent-support: var(--color-night-950);
+
+  /* Borders and focus */
+  --border-subtle: light-dark(oklch(86% 0.018 88), oklch(36% 0.02 260));
+  --border-strong: light-dark(oklch(72% 0.028 72), oklch(52% 0.028 95));
+  --focus-ring: light-dark(var(--color-sea-500), var(--color-sun-400));
+
+  /* Accent system */
+  --accent: var(--color-accent-ui);
+  --accent-strong: light-dark(var(--color-guava-600), var(--color-sun-500));
+  --accent-soft: light-dark(
+    color-mix(in oklch, var(--color-guava-400) 22%, white),
+    color-mix(in oklch, var(--color-sun-400) 30%, black)
+  );
+  --accent-support: light-dark(var(--color-leaf-500), var(--color-sea-400));
+  accent-color: var(--accent);
+
+  /* Effects */
+  --effect-blur-header: 8px;
+  --effect-saturate-header: 180%;
+
+  /* Header chrome */
+  --shell-header-surface-solid: light-dark(oklch(96.3% 0.022 82 / 1), oklch(21% 0.02 260 / 1));
+  --shell-header-surface: light-dark(oklch(96.3% 0.022 82 / 0.8), oklch(21% 0.02 260 / 0.8));
+  --shell-header-border: light-dark(oklch(85% 0.026 78 / 0.9), oklch(42% 0.018 260 / 0.9));
+  --shell-header-shadow: 0 0 1rem oklch(0% 0 0 / 0.5);
+  --shell-header-text: var(--text-primary);
+  --shell-header-link-hover: var(--accent-strong);
+  --shell-header-control-hover: var(--accent-soft);
+
+  /* Footer chrome */
+  --shell-footer-surface: light-dark(var(--surface-inverse), oklch(16% 0.02 260));
+  --shell-footer-border: light-dark(oklch(70% 0.025 72 / 0.35), oklch(58% 0.025 95 / 0.28));
+  --shell-footer-text: var(--text-inverse);
+  --shell-footer-text-muted: light-dark(oklch(88% 0.012 95), oklch(72% 0.012 95));
+  --shell-footer-accent: light-dark(var(--color-sun-500), var(--color-sea-400));
+}
+
+@supports (color: contrast-color(white)) {
+  :root {
+    --text-on-accent: contrast-color(var(--accent));
+    --text-on-accent-support: contrast-color(var(--accent-support));
+  }
 }
 
 body {
