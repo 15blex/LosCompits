@@ -125,17 +125,36 @@
   --shell-header-control-border-hover: light-dark(var(--color-guava-500), var(--color-sun-400));
 
   /* Footer chrome */
-  --shell-footer-surface: light-dark(var(--surface-inverse), oklch(16% 0.02 260));
-  --shell-footer-border: light-dark(oklch(70% 0.025 72 / 0.35), oklch(58% 0.025 95 / 0.28));
-  --shell-footer-text: var(--text-inverse);
-  --shell-footer-text-muted: light-dark(oklch(88% 0.012 95), oklch(72% 0.012 95));
-  --shell-footer-accent: light-dark(var(--color-sun-500), var(--color-sea-400));
+  --shell-footer-surface: light-dark(
+    color-mix(in oklch, var(--color-guava-400) 34%, var(--color-sand-50)),
+    color-mix(in oklch, var(--color-sea-600) 72%, black)
+  );
+  --shell-footer-border: light-dark(var(--color-guava-500), var(--color-sea-400));
+  --shell-footer-text: light-dark(oklch(24% 0.03 26), oklch(96% 0.012 92));
+  --shell-footer-text-muted: light-dark(oklch(38% 0.022 26), oklch(82% 0.012 92));
+  --shell-footer-accent: light-dark(var(--color-sea-500), var(--color-sun-400));
 }
 
 @supports (color: contrast-color(white)) {
   :root {
     --text-on-accent: contrast-color(var(--accent));
     --text-on-accent-support: contrast-color(var(--accent-support));
+  }
+}
+
+@keyframes hearbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  35%,
+  75% {
+    transform: scale(0.92);
   }
 }
 

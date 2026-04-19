@@ -14,7 +14,10 @@
   footer {
     display: grid;
     place-content: center;
+    background: var(--shell-footer-surface);
+    border-block-start: 1px solid var(--shell-footer-border);
     p {
+      color: var(--shell-footer-text-muted);
       text-align: center;
     }
   }

@@ -29,6 +29,13 @@ main {
 footer {
   padding-inline: var(--space-page-inline);
   padding-block: var(--space-2xs);
+
+  svg {
+    color: var(--shell-footer-accent);
+    &:first-of-type {
+      animation: hearbeat 1.5s ease-in-out infinite;
+    }
+  }
 }
 
 select {
