@@ -11,7 +11,7 @@
       id: "omar",
       name: "Omar Alejandro Ramos Narváez",
       role: "Percusiones, Voz",
-      country: "Colombia",
+      country: "Mexico",
       img: omar,
     },
     {
@@ -25,21 +25,21 @@
       id: "ricardo",
       name: "Ricardo Garcia Gutierrez",
       role: "Trompeta",
-      country: "Argentina",
+      country: "Mexico",
       img: ricardo,
     },
     {
       id: "lucas",
       name: "Lucas Raiquen Pereyra",
       role: "Trompeta",
-      country: "Mexico",
+      country: "Argentina",
       img: lucas,
     },
     {
       id: "abraham",
       name: "Abraham Ruvalcaba",
       role: "Guitarra, Voz",
-      country: "Brazil",
+      country: "Mexico",
       img: abraham,
     },
     {
