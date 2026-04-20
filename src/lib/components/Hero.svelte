@@ -41,7 +41,20 @@
     }
   }
 
+  h1,p {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0 0 0.5rem var(--hero-text-shadow);
+    font-weight: bolder;
+  }
+  
+  h1{
+    font-size: clamp(4rem, 2.4rem + 6vw, 8rem);
+    color: var(--hero-text-title);
+  }
+  
   p {
-    font-size: var(--font-size-lead);
+    font-size: clamp(1.5rem, 1rem + 2.4vw, 3rem);
+    color: var(--hero-text-subtitle);
   }
 </style>

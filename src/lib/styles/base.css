@@ -124,6 +124,10 @@
   --shell-header-control-border: light-dark(var(--color-earth-400), var(--color-earth-600));
   --shell-header-control-border-hover: light-dark(var(--color-guava-500), var(--color-sun-400));
 
+  --hero-text-title: light-dark(var(--color-sun-500), var(--color-sun-400));
+  --hero-text-subtitle: light-dark(var(--color-mango-500), var(--color-mango-400));
+  --hero-text-shadow: oklch(0% 0 0 / 0.75);
+
   /* Footer chrome */
   --shell-footer-surface: light-dark(
     color-mix(in oklch, var(--color-guava-400) 34%, var(--color-sand-50)),
@@ -164,4 +168,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   text-rendering: optimizeLegibility;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-subtle) transparent;
+  scrollbar-gutter: stable;
 }

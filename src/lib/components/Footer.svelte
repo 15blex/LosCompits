@@ -1,6 +1,5 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
-
+  import Icon from "@iconify/svelte";
 
   const currentYear = new Date().getFullYear();
 </script>
@@ -26,7 +25,7 @@
 <style>
   footer {
     display: grid;
-    gap: var(--space-l);
+    gap: var(--space-m);
     color: var(--shell-footer-text);
     text-wrap: pretty;
 
