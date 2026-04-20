@@ -8,36 +8,42 @@
 
   const members = [
     {
+      id: "omar",
       name: "Omar Alejandro Ramos Narváez",
       role: "Percusiones, Voz",
       country: "Colombia",
       img: omar,
     },
     {
+      id: "facundo",
       name: "Facundo López",
       role: "Percusiones, Voz",
       country: "Argentina",
       img: facundo,
     },
     {
+      id: "ricardo",
       name: "Ricardo Garcia Gutierrez",
       role: "Trompeta",
       country: "Argentina",
       img: ricardo,
     },
     {
+      id: "lucas",
       name: "Lucas Raiquen Pereyra",
       role: "Trompeta",
       country: "Mexico",
       img: lucas,
     },
     {
+      id: "abraham",
       name: "Abraham Ruvalcaba",
       role: "Guitarra, Voz",
       country: "Brazil",
       img: abraham,
     },
     {
+      id: "lalo",
       name: "Lalo Abbadié",
       role: "Contrabajo, Voz",
       country: "Mexico",
@@ -62,7 +68,7 @@
     </p>
 
     <ul class="members" aria-label="Integrantes de Los Compits">
-      {#each members as member (member.name)}
+      {#each members as member (member.id)}
         <li>
           <article class="member" aria-label={member.name}>
             <img src={member.img} alt={member.name} />
