@@ -44,7 +44,7 @@
   h1,p {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
-    text-shadow: 0 0 0.5rem var(--hero-text-shadow);
+    text-shadow: 0 0 1rem var(--hero-text-shadow);
     font-weight: bolder;
   }
   

@@ -62,20 +62,19 @@
 }
 
 :where(h1) {
-  font-size: var(--font-size-display);
   line-height: var(--line-height-tight);
 }
 
 :where(h2) {
-  font-size: var(--font-size-heading);
+  font-size: var(--font-size-3xl);
 }
 
 :where(h3) {
-  font-size: var(--font-size-heading-sm);
+  font-size: var(--font-size-2xl);
 }
 
 :where(p, li, dd, dt, blockquote) {
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-m);
 }
 
 :where(input, button, textarea, select) {

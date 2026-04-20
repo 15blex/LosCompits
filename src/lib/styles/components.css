@@ -37,7 +37,7 @@ footer {
   }
 
   svg {
-    color: var(--shell-footer-accent);
+    color: var(--accent-strong);
     &:first-of-type {
       animation: hearbeat 1.5s ease-in-out infinite;
     }

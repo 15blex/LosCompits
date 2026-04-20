@@ -15,18 +15,17 @@ msgstr ""
 msgid "Grupo de músicos de Barcelona que interpreta cumbia, salsa y son cubano para eventos, calles y celebraciones."
 msgstr ""
 
-#: src/lib/components/Band.svelte
 #: src/lib/components/Hero.svelte
 #: src/routes/+layout.svelte
 #: src/routes/+layout.svelte
 msgid "Los Compits"
 msgstr ""
 
+#: src/lib/components/Band.svelte
 #: src/lib/components/Header.svelte
 msgid "La Banda"
 msgstr ""
 
-#: src/lib/components/Bio.svelte
 #: src/lib/components/Header.svelte
 msgid "Biografía"
 msgstr ""
@@ -100,33 +99,26 @@ msgstr ""
 msgid "Selecciona el idioma"
 msgstr ""
 
-#: src/lib/components/Bio.svelte
-msgid "Este grupo se forma en las calles de Barcelona trasladando cada uno de sus integrantes el sabor de sus tierras lanzando un mensaje de alegria y igualdad que no dejará indiferente a nadie."
-msgstr ""
+#~ msgid "Este grupo se forma en las calles de Barcelona trasladando cada uno de sus integrantes el sabor de sus tierras lanzando un mensaje de alegria y igualdad que no dejará indiferente a nadie."
+#~ msgstr ""
 
-#: src/lib/components/Bio.svelte
-msgid "El nombre de la banda define el carnalismo amistad y buena onda que representan siendo de diferentes partes del mundo y sin tener lazos de sangre (los compit’s) nos harán bailar y olvodarnos de los prejuicios que envuelven este mundo."
-msgstr ""
+#~ msgid "El nombre de la banda define el carnalismo amistad y buena onda que representan siendo de diferentes partes del mundo y sin tener lazos de sangre (los compit’s) nos harán bailar y olvodarnos de los prejuicios que envuelven este mundo."
+#~ msgstr ""
 
-#: src/lib/components/Contacts.svelte
-msgid "Nuestros Contactos"
-msgstr ""
+#~ msgid "Nuestros Contactos"
+#~ msgstr ""
 
-#: src/lib/components/Contacts.svelte
-msgid "¿Quieres que toquemos en tu evento?"
-msgstr ""
+#~ msgid "¿Quieres que toquemos en tu evento?"
+#~ msgstr ""
 
-#: src/lib/components/Contacts.svelte
-msgid "Estamos listos para llevar la magia de Los Compits a tu próxima celebración."
-msgstr ""
+#~ msgid "Estamos listos para llevar la magia de Los Compits a tu próxima celebración."
+#~ msgstr ""
 
-#: src/lib/components/Contacts.svelte
-msgid "<0/> Email: <1>info@loscompits.com</1>"
-msgstr ""
+#~ msgid "<0/> Email: <1>info@loscompits.com</1>"
+#~ msgstr ""
 
-#: src/lib/components/Contacts.svelte
-msgid "<0/> Teléfono: <1/>"
-msgstr ""
+#~ msgid "<0/> Teléfono: <1/>"
+#~ msgstr ""
 
 #: src/lib/components/Contacts.svelte
 msgid "Facebook"
@@ -136,9 +128,8 @@ msgstr ""
 msgid "Instagram"
 msgstr ""
 
-#: src/lib/components/Contacts.svelte
-msgid "<0/> Redes sociales: <1/>"
-msgstr ""
+#~ msgid "<0/> Redes sociales: <1/>"
+#~ msgstr ""
 
 #~ msgid "Copyright © 2024 Los Compits. Todos los derechos reservados."
 #~ msgstr ""
@@ -207,9 +198,8 @@ msgstr ""
 msgid "Contrabajo, Voz"
 msgstr ""
 
-#: src/lib/components/Band.svelte
-msgid "Los Compits es una banda de cumbia, salsa y son cubano con sede en Barcelona. Fundada en 2024, la banda se ha ganado un lugar destacado en la escena musical local gracias a su energía contagiosa y su habilidad para fusionar ritmos tradicionales con un toque moderno."
-msgstr ""
+#~ msgid "Los Compits es una banda de cumbia, salsa y son cubano con sede en Barcelona. Fundada en 2024, la banda se ha ganado un lugar destacado en la escena musical local gracias a su energía contagiosa y su habilidad para fusionar ritmos tradicionales con un toque moderno."
+#~ msgstr ""
 
 #~ msgid "Copyright © 2024 Los Compits. Todos los derechos reservados. Hecho con <0/> y <1/> por Los Compits"
 #~ msgstr ""
@@ -247,8 +237,9 @@ msgstr ""
 #~ msgid "Barcelona, calle, escenario y fiesta popular"
 #~ msgstr ""
 
-#~ msgid "info@loscompits.com"
-#~ msgstr ""
+#: src/lib/components/Contacts.svelte
+msgid "info@loscompits.com"
+msgstr ""
 
 #~ msgid "Redes sociales"
 #~ msgstr ""
@@ -266,4 +257,144 @@ msgstr ""
 
 #: src/lib/components/Footer.svelte
 msgid "Cierre legal y créditos"
+msgstr ""
+
+#: src/lib/components/Bio.svelte
+msgid "Nuestra Historia"
+msgstr ""
+
+#~ msgid "Contacta con nosotros!"
+#~ msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Los Compits es una banda de cumbia, salsa y son cubano con sede en Barcelona."
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Fundada en 2024, la banda se ha ganado un lugar destacado en la escena musical local gracias a su energía contagiosa y su habilidad para fusionar ritmos tradicionales con un toque moderno."
+msgstr ""
+
+#~ msgid "Booking · Barcelona"
+#~ msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Llevemos el ritmo a tu próximo evento"
+msgstr ""
+
+#~ msgid "Tocamos en vermuts, festivales, fiestas de barrio, bodas y celebraciones privadas. Cuéntanos qué estás organizando y te proponemos el formato que mejor encaje."
+#~ msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Habla con la banda"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Elige el canal que te resulte más cómodo y te responderemos lo antes posible."
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Canales principales de contacto"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Escríbenos"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Llámanos"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "También puedes encontrarnos aquí"
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Redes sociales de Los Compits"
+msgstr ""
+
+#~ msgid "Tocamos en vermuts, festivales, fiestas de barrio, bodas y celebraciones privadas. <0/> Cuéntanos qué estás organizando y te proponemos el formato que mejor encaje."
+#~ msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Tocamos en vermuts, festivales, fiestas de barrio, bodas y celebraciones privadas."
+msgstr ""
+
+#: src/lib/components/Contacts.svelte
+msgid "Cuéntanos qué estás organizando y te proponemos el formato que mejor encaje."
+msgstr ""
+
+#: src/lib/components/Band.svelte
+msgid "Integrantes de Los Compits"
+msgstr ""
+
+#: src/lib/components/Bio.svelte
+msgid "Desde las calles de Barcelona"
+msgstr ""
+
+#: src/lib/components/Bio.svelte
+msgid "Los Compits nace en las calles de Barcelona, llevando el sabor de las tierras de cada uno de sus integrantes y compartiendo un mensaje de alegría, igualdad y cercanía que no deja indiferente a nadie."
+msgstr ""
+
+#: src/lib/components/Bio.svelte
+msgid "El nombre de la banda habla de amistad, carnalismo y buena onda. Venimos de lugares distintos del mundo, sin lazos de sangre, pero con la misma energía para hacer bailar, celebrar y dejar atrás los prejuicios que todavía nos rodean."
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Sonido, calle y escenario"
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Muy pronto compartiremos vídeos, fotos y momentos en directo para que puedas ver la energía de Los Compits también fuera del escenario."
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Próximamente"
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Aquí aparecerán nuestros vídeos, sesiones y galerías"
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Esta sección está preparada para crecer sin romper el diseño: puedes usarla más adelante para incrustar un vídeo destacado, una pequeña galería o enlaces a actuaciones grabadas."
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Tipos de contenido que se mostrarán próximamente"
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Vídeo"
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Directos y sesiones"
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Espacio preparado para incrustaciones o miniaturas."
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Galería"
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Fotos de la banda"
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Ideal para imágenes de conciertos, calle o backstage."
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Prensa"
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Clips y menciones"
+msgstr ""
+
+#: src/lib/components/Media.svelte
+msgid "Perfecto para reseñas, publicaciones o apariciones destacadas."
 msgstr ""

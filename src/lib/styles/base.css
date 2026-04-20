@@ -131,11 +131,14 @@
   /* Footer chrome */
   --shell-footer-surface: light-dark(
     color-mix(in oklch, var(--color-guava-400) 34%, var(--color-sand-50)),
-    color-mix(in oklch, var(--color-sea-600) 72%, black)
+    color-mix(in oklch, var(--color-earth-900) 78%, var(--color-night-900))
   );
-  --shell-footer-border: light-dark(var(--color-guava-500), var(--color-sea-400));
-  --shell-footer-text: light-dark(oklch(24% 0.03 26), oklch(96% 0.012 92));
-  --shell-footer-text-muted: light-dark(oklch(38% 0.022 26), oklch(82% 0.012 92));
+  --shell-footer-border: light-dark(
+    var(--color-guava-500),
+    color-mix(in oklch, var(--color-earth-600) 72%, var(--color-guava-500))
+  );
+  --shell-footer-text: light-dark(oklch(24% 0.03 26), oklch(94% 0.014 88));
+  --shell-footer-text-muted: light-dark(oklch(38% 0.022 26), oklch(78% 0.014 88));
   --shell-footer-accent: light-dark(var(--color-sea-500), var(--color-sun-400));
 }
 

@@ -34,15 +34,17 @@
     }
 
     > article {
+      inline-size: min(100%, 58rem);
+      justify-self: center;
       display: grid;
-      gap: var(--space-l);
-
-      > :where(section) {
-        display: grid;
-        gap: var(--space-xs);
-      }
+      gap: var(--space-s);
 
       > section {
+        display: grid;
+        gap: var(--space-xs);
+        justify-items: center;
+        text-align: center;
+
         > p:first-child {
           color: var(--shell-footer-text-muted);
           font-size: var(--font-size-small);
@@ -56,18 +58,21 @@
         }
 
         > p:last-child {
-          max-inline-size: 60ch;
+          max-inline-size: 52ch;
           color: var(--shell-footer-text-muted);
         }
       }
     }
 
     > article + section {
+      inline-size: min(100%, 58rem);
+      justify-self: center;
       display: grid;
+      gap: var(--space-2xs);
       padding-block-start: var(--space-s);
       border-block-start: 1px solid color-mix(in oklch, var(--shell-footer-border) 55%, transparent);
       text-align: center;
-      
+
       small {
         color: var(--shell-footer-text-muted);
       }
@@ -76,14 +81,14 @@
 
   @container content (width >= 48rem) {
     footer {
-      > article {
-        grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr));
-        align-items: start;
-      }
-
       > article + section {
         grid-template-columns: 1fr auto;
         align-items: center;
+        text-align: start;
+
+        > small:last-child {
+          justify-self: end;
+        }
       }
     }
   }
