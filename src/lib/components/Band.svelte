@@ -26,14 +26,14 @@
       name: "Lucas Raiquen Pereyra",
       role: "Trompeta",
       country: "Argentina",
-      img: ricardo,
+      img: lucas,
     },
     {
       id: "ricardo",
       name: "Ricardo Garcia Gutierrez",
       role: "Trompeta",
       country: "Mexico",
-      img: lucas,
+      img: ricardo,
     },
     {
       id: "abraham",
