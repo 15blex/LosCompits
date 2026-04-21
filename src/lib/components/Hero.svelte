@@ -1,5 +1,5 @@
 <section id="hero">
-  <h1>Los Compits</h1>
+  <h1>Los Compit's</h1>
   <p>Cumbia, Salsa y Son Cubano</p>
 </section>
 

@@ -5,7 +5,7 @@
     <p>Desde las calles de Barcelona</p>
     <h2 id="bio-title">Nuestra Historia</h2>
     <p>
-      Los Compits nace en las calles de Barcelona, llevando el sabor de las tierras de cada uno de
+      Los Compit's nacen en las calles de Barcelona, llevando el sabor de las tierras de cada uno de
       sus integrantes y compartiendo un mensaje de alegría, igualdad y cercanía que no deja
       indiferente a nadie.
     </p>

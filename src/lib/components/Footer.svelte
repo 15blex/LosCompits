@@ -7,7 +7,7 @@
 <footer aria-labelledby="footer-title">
   <article>
     <section aria-labelledby="footer-title">
-      <p><small>Los Compits · Barcelona</small></p>
+      <p><small>Los Compit's · Barcelona</small></p>
       <h2 id="footer-title">Ritmo callejero con alma latina</h2>
       <p>
         Nacidos entre plazas y calles de Barcelona, llevamos cumbia, salsa y son cubano a
@@ -17,8 +17,8 @@
   </article>
 
   <section aria-label="Cierre legal y créditos">
-    <small>© {currentYear} Los Compits. Música nacida en las calles de Barcelona.</small>
-    <small>Hecho con <Icon icon="mdi:heart" /> y <Icon icon="mdi:music" /> por Los Compits</small>
+    <small>© {currentYear} Los Compit's. Música nacida en las calles de Barcelona.</small>
+    <small>Hecho con <Icon icon="mdi:heart" /> y <Icon icon="mdi:music" /> por Los Compit's</small>
   </section>
 </footer>
 
