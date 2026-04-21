@@ -147,9 +147,8 @@ msgstr "Omar Alejandro Ramos Narváez"
 msgid "Percusiones, Voz"
 msgstr "Percusiones, Voz"
 
-#: src/lib/components/Band.svelte
-msgid "Colombia"
-msgstr "Colombia"
+#~ msgid "Colombia"
+#~ msgstr "Colombia"
 
 #: src/lib/components/Band.svelte
 msgid "Facundo López"
@@ -175,6 +174,8 @@ msgstr "Lucas Raiquen Pereyra"
 
 #: src/lib/components/Band.svelte
 #: src/lib/components/Band.svelte
+#: src/lib/components/Band.svelte
+#: src/lib/components/Band.svelte
 msgid "Mexico"
 msgstr "Mexico"
 
@@ -186,9 +187,8 @@ msgstr "Abraham Ruvalcaba"
 msgid "Guitarra, Voz"
 msgstr "Guitarra, Voz"
 
-#: src/lib/components/Band.svelte
-msgid "Brazil"
-msgstr "Brazil"
+#~ msgid "Brazil"
+#~ msgstr "Brazil"
 
 #: src/lib/components/Band.svelte
 msgid "Lalo Abbadié"

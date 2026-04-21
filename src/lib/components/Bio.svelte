@@ -1,15 +1,9 @@
+<script lang="ts">
+</script>
 <section id="bio" aria-labelledby="bio-title">
-  <div class="bio-heading">
+  <article>
     <p>Desde las calles de Barcelona</p>
     <h2 id="bio-title">Nuestra Historia</h2>
-    <span class="bio-divider" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-    </span>
-  </div>
-
-  <article>
     <p>
       Los Compits nace en las calles de Barcelona, llevando el sabor de las tierras de cada uno de
       sus integrantes y compartiendo un mensaje de alegría, igualdad y cercanía que no deja
@@ -30,63 +24,22 @@
     gap: var(--space-s);
     padding-block: var(--space-xl);
     place-items: center;
-    background: linear-gradient(
-      180deg,
-      light-dark(
-        color-mix(in oklch, var(--surface-page) 96%, var(--color-sun-400)),
-        color-mix(in oklch, var(--surface-page) 90%, var(--color-earth-900))
-      ) 0%,
-      light-dark(
-        color-mix(in oklch, var(--surface-page) 100%, var(--color-sand-50)),
-        color-mix(in oklch, var(--surface-page) 94%, var(--color-night-900))
-      ) 100%
+    background-image:
+      url("../assets/images/loscompits.webp"), 
+      linear-gradient(
+        180deg,
+        light-dark(
+          color-mix(in oklch, var(--surface-page) 96%, var(--color-sun-400)),
+          color-mix(in oklch, var(--surface-page) 90%, var(--color-earth-900))
+        ) 0%,
+        light-dark(
+          color-mix(in oklch, var(--surface-page) 100%, var(--color-sand-50)),
+          color-mix(in oklch, var(--surface-page) 94%, var(--color-night-900))
+        ) 100%
     );
-
-    .bio-heading {
-      display: grid;
-      gap: var(--space-2xs);
-      justify-items: center;
-      text-align: center;
-
-      > p {
-        color: var(--text-soft);
-        font-size: var(--font-size-small);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      > h2 {
-        text-wrap: balance;
-      }
-
-      > .bio-divider {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-2xs);
-        margin-block-start: var(--space-2xs);
-
-        > span {
-          display: block;
-          block-size: 0.4rem;
-          border-radius: 999px;
-          background: light-dark(
-            color-mix(in oklch, var(--accent) 72%, var(--color-sand-50)),
-            color-mix(in oklch, var(--accent-strong) 64%, var(--color-earth-900))
-          );
-
-          &:first-child,
-          &:last-child {
-            inline-size: 2.25rem;
-            opacity: 0.68;
-          }
-
-          &:nth-child(2) {
-            inline-size: 0.7rem;
-            background: light-dark(var(--color-sun-500), var(--color-mango-400));
-          }
-        }
-      }
-    }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     > article {
       inline-size: min(100%, 58rem);
@@ -101,11 +54,22 @@
       );
       box-shadow: 0 1rem 2rem oklch(0% 0 0 / 0.04);
 
+      > h2 {
+        text-align: center;
+      }
+
       > p {
         margin: 0 auto;
         max-inline-size: 60ch;
         text-align: center;
         color: var(--text-primary);
+
+        &:nth-of-type(1) {
+          color: var(--text-soft);
+          font-size: var(--font-size-small);
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
       }
     }
   }

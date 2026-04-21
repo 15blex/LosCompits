@@ -147,9 +147,8 @@ msgstr ""
 msgid "Percusiones, Voz"
 msgstr ""
 
-#: src/lib/components/Band.svelte
-msgid "Colombia"
-msgstr ""
+#~ msgid "Colombia"
+#~ msgstr ""
 
 #: src/lib/components/Band.svelte
 msgid "Facundo López"
@@ -175,6 +174,8 @@ msgstr ""
 
 #: src/lib/components/Band.svelte
 #: src/lib/components/Band.svelte
+#: src/lib/components/Band.svelte
+#: src/lib/components/Band.svelte
 msgid "Mexico"
 msgstr ""
 
@@ -186,9 +187,8 @@ msgstr ""
 msgid "Guitarra, Voz"
 msgstr ""
 
-#: src/lib/components/Band.svelte
-msgid "Brazil"
-msgstr ""
+#~ msgid "Brazil"
+#~ msgstr ""
 
 #: src/lib/components/Band.svelte
 msgid "Lalo Abbadié"
