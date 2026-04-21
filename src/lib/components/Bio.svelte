@@ -20,26 +20,25 @@
 
 <style>
   section {
+    --bio-focus-inline: 50%;
+    --bio-focus-block: 100%;
+    --bio-overlay-opacity: 0.42;
+    --bio-overlay-stop: 78%;
+
     display: grid;
     gap: var(--space-s);
     padding-block: var(--space-xl);
     place-items: center;
     background-image:
-      url("../assets/images/loscompits.webp"), 
-      linear-gradient(
-        180deg,
-        light-dark(
-          color-mix(in oklch, var(--surface-page) 96%, var(--color-sun-400)),
-          color-mix(in oklch, var(--surface-page) 90%, var(--color-earth-900))
-        ) 0%,
-        light-dark(
-          color-mix(in oklch, var(--surface-page) 100%, var(--color-sand-50)),
-          color-mix(in oklch, var(--surface-page) 94%, var(--color-night-900))
-        ) 100%
-    );
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+      radial-gradient(
+        circle at 50% 45%,
+        rgb(0 0 0 / 0) 18%,
+        rgb(0 0 0 / var(--bio-overlay-opacity)) var(--bio-overlay-stop)
+      ),
+      url("../assets/images/loscompits.webp");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center center, center center;
 
     > article {
       inline-size: min(100%, 58rem);
@@ -53,6 +52,7 @@
         color-mix(in oklch, var(--surface-overlay) 88%, var(--color-earth-900))
       );
       box-shadow: 0 1rem 2rem oklch(0% 0 0 / 0.04);
+      backdrop-filter: blur(8px);
 
       > h2 {
         text-align: center;
