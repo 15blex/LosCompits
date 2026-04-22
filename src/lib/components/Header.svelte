@@ -1,5 +1,5 @@
 <script lang="ts">
-  import logo from '$lib/assets/images/Logo.jpg';
+  import logo from '$lib/assets/images/Logo.webp';
   import { startViewTransition } from '$lib/utils';
   import Icon from '@iconify/svelte';
   import ColorSchemeToggle from './ColorSchemeToggle.svelte';
