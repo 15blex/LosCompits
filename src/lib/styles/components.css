@@ -70,7 +70,7 @@ select {
   }
 
   button svg {
-    width: 24px;
+    width: 42px;
     aspect-ratio: 1 / 1;
   }
 }

@@ -4,6 +4,8 @@ import { wuchale } from "wuchale/vite";
 
 export default defineConfig({
   build: {
+    minify: "oxc",
+    sourcemap: false,
     target: "esnext",
     modulePreload: {
       polyfill: false,
