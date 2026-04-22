@@ -33,7 +33,7 @@
 <style>
   section {
     --bio-focus-inline: 50%;
-    --bio-focus-block: 100%;
+    --bio-focus-block: 50%;
     --bio-overlay-opacity: 0.42;
     --bio-overlay-stop: 78%;
 
