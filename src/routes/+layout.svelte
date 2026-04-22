@@ -1,5 +1,5 @@
 <script lang="ts">
-    import favicon from '$lib/assets/icons/favicon.svg';
+    import favicon from '$lib/assets/icons/favicon.ico';
     import heroDesktopImage from '$lib/assets/images/hero-1333.webp';
     import heroCompactImage from '$lib/assets/images/hero-480.webp';
     import heroMediumImage from '$lib/assets/images/hero-828.webp';
@@ -10,7 +10,7 @@
 
     let { children } = $props();
 
-    const pageTitle = 'Los Compits | Cumbia, Salsa y Son Cubano en Barcelona';
+    const pageTitle = "Los Compit's | Cumbia, Salsa y Son Cubano en Barcelona";
     const pageDescription =
         'Grupo de músicos de Barcelona que interpreta cumbia, salsa y son cubano para eventos, calles y celebraciones.';
     const siteUrl = 'https://www.loscompits.es/';
@@ -56,12 +56,12 @@
     <link id="display-font-stylesheet" rel="stylesheet" href={displayFontStyles} media="print" />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
-    <meta name="author" content="Los Compits" />
+    <meta name="author" content="Los Compit's" />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href={siteUrl} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Los Compits" />
+    <meta property="og:site_name" content="Los Compit's" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={siteUrl} />

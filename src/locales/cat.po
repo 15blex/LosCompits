@@ -7,18 +7,15 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/routes/+layout.svelte
-msgid "Los Compits | Cumbia, Salsa y Son Cubano en Barcelona"
-msgstr ""
+#~ msgid "Los Compits | Cumbia, Salsa y Son Cubano en Barcelona"
+#~ msgstr ""
 
 #: src/routes/+layout.svelte
 msgid "Grupo de músicos de Barcelona que interpreta cumbia, salsa y son cubano para eventos, calles y celebraciones."
 msgstr ""
 
-#: src/routes/+layout.svelte
-#: src/routes/+layout.svelte
-msgid "Los Compits"
-msgstr ""
+#~ msgid "Los Compits"
+#~ msgstr ""
 
 #: src/lib/components/Band.svelte
 #: src/lib/components/Header.svelte
@@ -411,5 +408,11 @@ msgid "Hecho con <0/> y <1/> por Los Compit's"
 msgstr ""
 
 #: src/lib/components/Hero.svelte
+#: src/routes/+layout.svelte
+#: src/routes/+layout.svelte
 msgid "Los Compit's"
+msgstr ""
+
+#: src/routes/+layout.svelte
+msgid "Los Compit's | Cumbia, Salsa y Son Cubano en Barcelona"
 msgstr ""
