@@ -14,7 +14,6 @@
     const pageDescription =
         'Grupo de músicos de Barcelona que interpreta cumbia, salsa y son cubano para eventos, calles y celebraciones.';
     const siteUrl = 'https://www.loscompits.es/';
-    const heroImageSet = `${heroCompactImage} 480w, ${heroMediumImage} 828w, ${heroDesktopImage} 1333w`;
 
     onMount(() => {
         const displayFontLink = document.getElementById('display-font-stylesheet');
@@ -32,11 +31,26 @@
     <link
         rel="preload"
         as="image"
+        href={heroCompactImage}
+        type="image/webp"
+        fetchpriority="high"
+        media="(max-width: 47.99rem)"
+    />
+    <link
+        rel="preload"
+        as="image"
+        href={heroMediumImage}
+        type="image/webp"
+        fetchpriority="high"
+        media="(min-width: 48rem) and (max-width: 71.99rem)"
+    />
+    <link
+        rel="preload"
+        as="image"
         href={heroDesktopImage}
         type="image/webp"
         fetchpriority="high"
-        imagesrcset={heroImageSet}
-        imagesizes="100vw"
+        media="(min-width: 72rem)"
     />
     <link rel="preload" as="style" href={displayFontStyles} />
     <link id="display-font-stylesheet" rel="stylesheet" href={displayFontStyles} media="print" />

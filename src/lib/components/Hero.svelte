@@ -2,23 +2,23 @@
   import heroDesktopImage from "$lib/assets/images/hero-1333.webp";
   import heroCompactImage from "$lib/assets/images/hero-480.webp";
   import heroMediumImage from "$lib/assets/images/hero-828.webp";
-
-  const heroImageSet = `${heroCompactImage} 480w, ${heroMediumImage} 828w, ${heroDesktopImage} 1333w`;
 </script>
 
 <section id="hero" aria-labelledby="hero-title">
-  <img
-    class="hero-image"
-    src={heroDesktopImage}
-    srcset={heroImageSet}
-    sizes="100vw"
-    alt=""
-    width={1333}
-    height={922}
-    fetchpriority="high"
-    loading="eager"
-    decoding="async"
-  />
+  <picture class="hero-media">
+    <source media="(max-width: 47.99rem)" srcset={heroCompactImage} type="image/webp" />
+    <source media="(max-width: 71.99rem)" srcset={heroMediumImage} type="image/webp" />
+    <img
+      class="hero-image"
+      src={heroDesktopImage}
+      alt=""
+      width={1333}
+      height={922}
+      fetchpriority="high"
+      loading="eager"
+      decoding="async"
+    />
+  </picture>
 
   <div class="hero-copy">
     <h1 id="hero-title">Los Compit's</h1>
@@ -37,7 +37,7 @@
     isolation: isolate;
     overflow: clip;
     background-color: rgb(10 10 10);
-    min-block-size: clamp(18rem, 68vw, 46rem);
+    min-block-size: clamp(34rem, 78svh, 42rem);
     display: grid;
     place-items: center;
     text-align: center;
@@ -57,10 +57,16 @@
     pointer-events: none;
   }
 
-  .hero-image {
+  .hero-media {
     position: absolute;
     inset: 0;
     z-index: 0;
+    display: block;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0;
     inline-size: 100%;
     block-size: 100%;
     object-fit: cover;

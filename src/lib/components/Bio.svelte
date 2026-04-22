@@ -8,6 +8,7 @@
     alt=""
     width={636}
     height={602}
+    fetchpriority="low"
     loading="lazy"
     decoding="async"
   />
