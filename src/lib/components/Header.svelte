@@ -87,6 +87,7 @@
 
 <style>
   header {
+    --header-control-size: 48px;
     container: header / inline-size;
     background: transparent;
     color: var(--shell-header-text);
@@ -179,8 +180,8 @@
       grid-area: toggle;
       justify-self: end;
       z-index: 15;
-      inline-size: 40px;
-      block-size: 40px;
+      inline-size: var(--header-control-size);
+      block-size: var(--header-control-size);
       display: grid;
       place-items: center;
       color: var(--shell-header-control);

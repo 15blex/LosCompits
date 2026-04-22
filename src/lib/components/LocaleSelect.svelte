@@ -35,8 +35,8 @@
 <style>
   @supports selector(select::picker(select)) {
     select {
-      inline-size: 40px;
-      block-size: 40px;
+      inline-size: var(--header-control-size, 48px);
+      block-size: var(--header-control-size, 48px);
       display: grid;
       place-items: center;
       padding: 0;
