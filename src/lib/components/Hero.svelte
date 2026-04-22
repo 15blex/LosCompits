@@ -1,8 +1,9 @@
 <script lang="ts">
-    import heroDesktopImage from "$lib/assets/images/hero-1333.webp";
-    import heroMobileImage from "$lib/assets/images/hero-768.webp";
+  import heroDesktopImage from "$lib/assets/images/hero-1333.webp";
+  import heroCompactImage from "$lib/assets/images/hero-480.webp";
+  import heroMediumImage from "$lib/assets/images/hero-828.webp";
 
-    const heroImageSet = `${heroMobileImage} 768w, ${heroDesktopImage} 1333w`;
+  const heroImageSet = `${heroCompactImage} 480w, ${heroMediumImage} 828w, ${heroDesktopImage} 1333w`;
 </script>
 
 <section id="hero" aria-labelledby="hero-title">

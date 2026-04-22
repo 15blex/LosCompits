@@ -1,9 +1,12 @@
 <script lang="ts">
+  import logoRetina from '$lib/assets/images/Logo-200.webp';
   import logo from '$lib/assets/images/Logo.webp';
   import { startViewTransition } from '$lib/utils';
   import Icon from '@iconify/svelte';
   import ColorSchemeToggle from './ColorSchemeToggle.svelte';
   import LocaleSelect from './LocaleSelect.svelte';
+
+  const logoSet = `${logo} 1x, ${logoRetina} 2x`;
 
   let menuOpen = $state(false);
   const desktopQuery = '(min-width: 64rem)';
@@ -55,7 +58,7 @@
 
 <header>
   <a href="#hero" onclick={onLinkClick}>
-    <img src={logo} alt="Los Compits logo" width={100} height={100} decoding="async" />
+    <img src={logo} srcset={logoSet} alt="Los Compits logo" width={100} height={100} decoding="async" />
   </a>
 
   <nav id="site-nav">
