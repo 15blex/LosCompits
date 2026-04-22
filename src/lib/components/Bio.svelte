@@ -1,5 +1,5 @@
 <script lang="ts">
-  import bioImage from "$lib/assets/images/loscompits.webp";
+    import bioImage from "$lib/assets/images/loscompits-636.webp";
 </script>
 <section id="bio" aria-labelledby="bio-title">
   <img

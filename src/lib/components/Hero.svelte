@@ -1,11 +1,16 @@
 <script lang="ts">
-  import heroImage from "$lib/assets/images/hero.webp";
+    import heroDesktopImage from "$lib/assets/images/hero-1333.webp";
+    import heroMobileImage from "$lib/assets/images/hero-768.webp";
+
+    const heroImageSet = `${heroMobileImage} 768w, ${heroDesktopImage} 1333w`;
 </script>
 
 <section id="hero" aria-labelledby="hero-title">
   <img
     class="hero-image"
-    src={heroImage}
+    src={heroDesktopImage}
+    srcset={heroImageSet}
+    sizes="100vw"
     alt=""
     width={1333}
     height={922}
