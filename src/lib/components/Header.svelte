@@ -55,7 +55,7 @@
 
 <header>
   <a href="#hero" onclick={onLinkClick}>
-    <img src={logo} alt="Los Compits logo" width="100px" height="100px" />
+    <img src={logo} alt="Los Compits logo" width={100} height={100} decoding="async" />
   </a>
 
   <nav id="site-nav">

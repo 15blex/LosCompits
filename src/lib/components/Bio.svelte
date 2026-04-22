@@ -1,6 +1,17 @@
 <script lang="ts">
+  import bioImage from "$lib/assets/images/loscompits.webp";
 </script>
 <section id="bio" aria-labelledby="bio-title">
+  <img
+    class="bio-image"
+    src={bioImage}
+    alt=""
+    width={636}
+    height={602}
+    loading="lazy"
+    decoding="async"
+  />
+
   <article>
     <p>Desde las calles de Barcelona</p>
     <h2 id="bio-title">Nuestra Historia</h2>
@@ -25,22 +36,42 @@
     --bio-overlay-opacity: 0.42;
     --bio-overlay-stop: 78%;
 
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
     display: grid;
     gap: var(--space-s);
     padding-block: var(--space-xl);
     place-items: center;
-    background-image:
+    background-color: rgb(10 10 10);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
       radial-gradient(
         circle at 50% 45%,
         rgb(0 0 0 / 0) 18%,
         rgb(0 0 0 / var(--bio-overlay-opacity)) var(--bio-overlay-stop)
-      ),
-      url("../assets/images/loscompits.webp");
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
-    background-position: center center, center center;
+      );
+    }
+
+    > .bio-image {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      object-position: var(--bio-focus-inline) var(--bio-focus-block);
+    }
 
     > article {
+      position: relative;
+      z-index: 2;
       inline-size: min(100%, 58rem);
       display: grid;
       gap: var(--space-m);
