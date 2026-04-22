@@ -19,7 +19,7 @@
 
 {#snippet selectButton()}
   <button aria-haspopup="listbox" aria-label="Selecciona el idioma">
-    <Icon icon={locales.find(loc => loc.code === preferences.locale)?.flag || "mdi:earth"} width="32px" height="32px"/>
+    <Icon icon={locales.find(loc => loc.code === preferences.locale)?.flag || "mdi:earth"} width="28px" height="28px"/>
   </button>
 {/snippet}
 
@@ -35,25 +35,9 @@
 <style>
   @supports selector(select::picker(select)) {
     select {
-      inline-size: var(--header-control-size, 48px);
-      block-size: var(--header-control-size, 48px);
       display: grid;
       place-items: center;
       padding: 0;
-      color: var(--shell-header-control);
-      background: var(--shell-header-control-surface);
-      border: 2px solid var(--shell-header-control-border);
-      border-radius: 999px;
-      transition:
-        color 180ms ease,
-        background-color 180ms ease,
-        border-color 180ms ease,
-        transform 180ms ease;
-      
-      &:is(:hover, :focus-visible) {
-        color: var(--shell-header-control-hover);
-        border-color: var(--shell-header-control-border-hover);
-      }
       
       button {
         inline-size: 100%;
