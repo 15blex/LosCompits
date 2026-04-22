@@ -235,8 +235,8 @@
           padding-inline: var(--space-xs);
           padding-block: var(--space-3xs);
           border-radius: 999px;
-          background: color-mix(in oklch, var(--accent-soft) 42%, transparent);
-          color: var(--text-soft);
+          background: color-mix(in oklch, var(--accent-soft) 72%, var(--surface-elevated));
+          color: var(--text-primary);
           font-size: var(--font-size-small);
           letter-spacing: 0.08em;
           text-transform: uppercase;
