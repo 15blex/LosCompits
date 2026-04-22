@@ -15,7 +15,6 @@ msgstr ""
 msgid "Grupo de músicos de Barcelona que interpreta cumbia, salsa y son cubano para eventos, calles y celebraciones."
 msgstr ""
 
-#: src/lib/components/Hero.svelte
 #: src/routes/+layout.svelte
 #: src/routes/+layout.svelte
 msgid "Los Compits"
@@ -134,9 +133,8 @@ msgstr ""
 #~ msgid "Copyright © 2024 Los Compits. Todos los derechos reservados."
 #~ msgstr ""
 
-#: src/lib/components/Footer.svelte
-msgid "Hecho con <0/> y <1/> por Los Compits"
-msgstr ""
+#~ msgid "Hecho con <0/> y <1/> por Los Compits"
+#~ msgstr ""
 
 #: src/lib/components/Band.svelte
 msgid "Omar Alejandro Ramos Narváez"
@@ -207,9 +205,8 @@ msgstr ""
 #~ msgid "Copyright © 2024 Los Compits. Todos los derechos reservados. <0/> Hecho con <1/> y <2/> por Los Compits"
 #~ msgstr ""
 
-#: src/lib/components/Footer.svelte
-msgid "Los Compits · Barcelona"
-msgstr ""
+#~ msgid "Los Compits · Barcelona"
+#~ msgstr ""
 
 #: src/lib/components/Footer.svelte
 msgid "Ritmo callejero con alma latina"
@@ -244,10 +241,8 @@ msgstr ""
 #~ msgid "Redes sociales"
 #~ msgstr ""
 
-#. 0: currentYear
-#: src/lib/components/Footer.svelte
-msgid "© {0} Los Compits. Música nacida en las calles de Barcelona."
-msgstr ""
+#~ msgid "© {0} Los Compits. Música nacida en las calles de Barcelona."
+#~ msgstr ""
 
 #~ msgid "Redes sociales y cierre legal"
 #~ msgstr ""
@@ -331,9 +326,8 @@ msgstr ""
 msgid "Desde las calles de Barcelona"
 msgstr ""
 
-#: src/lib/components/Bio.svelte
-msgid "Los Compits nace en las calles de Barcelona, llevando el sabor de las tierras de cada uno de sus integrantes y compartiendo un mensaje de alegría, igualdad y cercanía que no deja indiferente a nadie."
-msgstr ""
+#~ msgid "Los Compits nace en las calles de Barcelona, llevando el sabor de las tierras de cada uno de sus integrantes y compartiendo un mensaje de alegría, igualdad y cercanía que no deja indiferente a nadie."
+#~ msgstr ""
 
 #: src/lib/components/Bio.svelte
 msgid "El nombre de la banda habla de amistad, carnalismo y buena onda. Venimos de lugares distintos del mundo, sin lazos de sangre, pero con la misma energía para hacer bailar, celebrar y dejar atrás los prejuicios que todavía nos rodean."
@@ -397,4 +391,25 @@ msgstr ""
 
 #: src/lib/components/Media.svelte
 msgid "Perfecto para reseñas, publicaciones o apariciones destacadas."
+msgstr ""
+
+#: src/lib/components/Bio.svelte
+msgid "Los Compit's nacen en las calles de Barcelona, llevando el sabor de las tierras de cada uno de sus integrantes y compartiendo un mensaje de alegría, igualdad y cercanía que no deja indiferente a nadie."
+msgstr ""
+
+#: src/lib/components/Footer.svelte
+msgid "Los Compit's · Barcelona"
+msgstr ""
+
+#. 0: currentYear
+#: src/lib/components/Footer.svelte
+msgid "© {0} Los Compit's. Música nacida en las calles de Barcelona."
+msgstr ""
+
+#: src/lib/components/Footer.svelte
+msgid "Hecho con <0/> y <1/> por Los Compit's"
+msgstr ""
+
+#: src/lib/components/Hero.svelte
+msgid "Los Compit's"
 msgstr ""
