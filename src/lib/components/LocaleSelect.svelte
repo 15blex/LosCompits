@@ -19,7 +19,7 @@
 
 {#snippet selectButton()}
   <button aria-haspopup="listbox" aria-label="Selecciona el idioma">
-    <Icon icon={locales.find(loc => loc.code === preferences.locale)?.flag || "mdi:earth"} />
+    <Icon icon={locales.find(loc => loc.code === preferences.locale)?.flag || "mdi:earth"} width="32px" height="32px"/>
   </button>
 {/snippet}
 

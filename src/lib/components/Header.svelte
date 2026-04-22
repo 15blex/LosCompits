@@ -55,7 +55,7 @@
 
 <header>
   <a href="#hero" onclick={onLinkClick}>
-    <img src={logo} alt="Los Compits logo" />
+    <img src={logo} alt="Los Compits logo" width="100px" height="100px" />
   </a>
 
   <nav id="site-nav">
@@ -87,7 +87,7 @@
 
 <style>
   header {
-    --header-control-size: 48px;
+    --header-control-size: 80px;
     container: header / inline-size;
     background: transparent;
     color: var(--shell-header-text);
@@ -107,7 +107,6 @@
       z-index: 15;
 
       img {
-        block-size: 80px;
         border-radius: 100%;
       }
     }

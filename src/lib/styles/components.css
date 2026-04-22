@@ -56,6 +56,11 @@ select {
     appearance: base-select;
   }
 
+  &::picker(select) {
+    cursor: pointer;
+    padding: var(--space-xs) 0;
+  }
+
   &::picker-icon {
     display: none;
   }
@@ -63,14 +68,10 @@ select {
   option {
     display: flex;
     align-items: center;
+    padding: 0 var(--space-s);
 
     &::checkmark {
       display: none;
     }
-  }
-
-  button svg {
-    width: 42px;
-    aspect-ratio: 1 / 1;
   }
 }
