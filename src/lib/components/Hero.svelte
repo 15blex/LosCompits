@@ -1,6 +1,23 @@
-<section id="hero">
-  <h1>Los Compit's</h1>
-  <p>Cumbia, Salsa y Son Cubano</p>
+<script lang="ts">
+  import heroImage from "$lib/assets/images/hero.webp";
+</script>
+
+<section id="hero" aria-labelledby="hero-title">
+  <img
+    class="hero-image"
+    src={heroImage}
+    alt=""
+    width={1333}
+    height={922}
+    fetchpriority="high"
+    loading="eager"
+    decoding="async"
+  />
+
+  <div class="hero-copy">
+    <h1 id="hero-title">Los Compit's</h1>
+    <p>Cumbia, Salsa y Son Cubano</p>
+  </div>
 </section>
 
 <style>
@@ -10,23 +27,43 @@
     --hero-overlay-opacity: 0.42;
     --hero-overlay-stop: 78%;
 
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
     background-color: rgb(10 10 10);
-    background-image:
+    min-block-size: clamp(18rem, 68vw, 46rem);
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
       radial-gradient(
         circle at 50% 45%,
         rgb(0 0 0 / 0) 18%,
         rgb(0 0 0 / var(--hero-overlay-opacity)) var(--hero-overlay-stop)
-      ),
-      url("../assets/images/hero.webp");
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
-    background-position:
-      center center,
-      var(--hero-focus-inline) var(--hero-focus-block);
-    min-block-size: clamp(18rem, 68vw, 46rem);
-    display: grid;
-    place-content: center;
-    text-align: center;
+      );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    object-position: var(--hero-focus-inline) var(--hero-focus-block);
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 2;
   }
 
   @container content (width >= 48rem) {

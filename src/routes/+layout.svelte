@@ -1,5 +1,6 @@
 <script lang="ts">
     import favicon from '$lib/assets/icons/favicon.svg';
+    import heroImage from '$lib/assets/images/hero.webp';
     import { preferences } from '$lib/preferences.svelte';
     import "$lib/styles/index.css";
     import { onMount } from 'svelte';
@@ -18,6 +19,7 @@
 
 <svelte:head>
     <link rel="icon" href={favicon} />
+    <link rel="preload" as="image" href={heroImage} type="image/webp" fetchpriority="high" />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
     <meta name="author" content="Los Compits" />
