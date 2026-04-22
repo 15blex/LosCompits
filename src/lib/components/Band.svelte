@@ -71,7 +71,7 @@
       {#each members as member (member.id)}
         <li>
           <article class="member" aria-label={member.name}>
-            <img src={member.img} alt={member.name} />
+            <img src={member.img} alt={member.name} width="100%" height="auto"/>
 
             <div class="member-copy">
               <h3>{member.name}</h3>
