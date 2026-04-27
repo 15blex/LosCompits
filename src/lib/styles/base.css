@@ -166,7 +166,7 @@
 }
 
 body {
-  min-block-size: 100%;
+  min-block-size: 100svh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;

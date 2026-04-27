@@ -6,7 +6,7 @@ export default defineConfig({
   hmr: true,
   locales: ["es", "cat", "it", "de", "fr", "en"],
   adapters: {
-    main: svelte({ loader: "sveltekit", sourceLocale: "es" }),
+    main: svelte({ loader: "sveltekit", sourceLocale: "es", files: ["src/**/*.{svelte}"] }),
     js: js({
       loader: "vite",
       sourceLocale: "es",

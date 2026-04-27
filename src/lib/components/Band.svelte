@@ -181,6 +181,8 @@
     margin-block-start: var(--space-xl);
     display: grid;
     list-style: none;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+
 
     > li {
       display: grid;
@@ -188,8 +190,8 @@
 
     .member {
       display: grid;
-      gap: var(--space-xs);
-      padding: var(--space-xs);
+      gap: var(--space-s);
+      padding: var(--space-s);
       border: 1px solid color-mix(in oklch, var(--border-subtle) 78%, transparent);
       border-radius: 1.25rem;
       background: color-mix(in oklch, var(--surface-elevated) 92%, transparent);
@@ -264,7 +266,6 @@
 
     .members {
       gap: var(--space-m);
-      grid-template-columns: repeat(2, minmax(150px, 1fr));
     }
   }
 
