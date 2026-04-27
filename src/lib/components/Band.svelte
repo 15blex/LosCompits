@@ -178,10 +178,10 @@
   }
 
   .members {
-    margin-block-start: var(--space-xl);
+    margin-block-start: var(--space-l);
     display: grid;
     list-style: none;
-    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
 
 
     > li {
@@ -280,7 +280,7 @@
 
     .members {
       gap: var(--space-l);
-      grid-template-columns: repeat(3, minmax(200px, 1fr));
+      grid-template-columns: repeat(3, minmax(250px, 1fr));
     }
   }
 </style>
