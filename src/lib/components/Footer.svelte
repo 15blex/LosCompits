@@ -6,7 +6,7 @@
 
 <footer aria-labelledby="footer-title">
   <article>
-    <section aria-labelledby="footer-title">
+    <section>
       <p><small>Los Compit's · Barcelona</small></p>
       <h2 id="footer-title">Ritmo callejero con alma latina</h2>
       <p>

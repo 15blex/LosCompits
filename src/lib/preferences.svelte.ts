@@ -34,28 +34,12 @@ const applyDocumentPreferences = (locale: Locale, colorScheme: ColorScheme) => {
 };
 
 export class Preferences {
-  locale = $state<Locale>("es");
-  colorScheme = $state<ColorScheme>("light");
-  private initialized = false;
+  locale = $state<Locale>(defaultLocale);
+  colorScheme = $state<ColorScheme>(defaultColorScheme);
   private initializationPromise: Promise<void> | null = null;
 
   initialize() {
-    if (this.initialized) {
-      return Promise.resolve();
-    }
-
-    if (this.initializationPromise) {
-      return this.initializationPromise;
-    }
-
-    this.initializationPromise = this.loadInitialPreferences()
-      .then(() => {
-        this.initialized = true;
-      })
-      .finally(() => {
-        this.initializationPromise = null;
-      });
-
+    this.initializationPromise ??= this.loadInitialPreferences();
     return this.initializationPromise;
   }
 

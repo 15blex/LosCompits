@@ -3,49 +3,41 @@
   import logo from '$lib/assets/images/Logo.webp';
   import { startViewTransition } from '$lib/utils';
   import Icon from '@iconify/svelte';
+  import { untrack } from 'svelte';
   import ColorSchemeToggle from './ColorSchemeToggle.svelte';
   import LocaleSelect from './LocaleSelect.svelte';
 
   const logoSet = `${logo} 1x, ${logoRetina} 2x`;
-
-  let menuOpen = $state(false);
   const desktopQuery = '(min-width: 64rem)';
 
-  const onclick = () => {
-    document.body.style.overflow = menuOpen ? '' : 'hidden';
-    startViewTransition(() => {
-      menuOpen = !menuOpen;
-    });
-  };
-
-  const onLinkClick = () => {
-    if (menuOpen) {
-      document.body.style.overflow = '';
-      startViewTransition(() => {
-        menuOpen = false;
-      });
-    }
-  };
-
-  const links: { href: string; label: string }[] = [
+  const links = [
     { href: '#hero', label: 'Inicio' },
     { href: '#bio', label: 'Biografía' },
     { href: '#band', label: 'La Banda' },
     { href: '#media', label: 'Medios' },
     { href: '#contact', label: 'Contactos' },
   ] as const;
-  
-  $effect(() => {
-    if (typeof window === 'undefined') return;
-    
-    const closeIfDesktop = () => {
-      if (mql.matches && menuOpen) {
-        menuOpen = false;
-        document.body.style.overflow = '';  
-      }
-    };
 
+  let menuOpen = $state(false);
+
+  const setMenuOpen = (open: boolean) => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    startViewTransition(() => {
+      menuOpen = open;
+    });
+  };
+
+  const onclick = () => setMenuOpen(!menuOpen);
+  const onLinkClick = () => {
+    if (menuOpen) setMenuOpen(false);
+  };
+
+  $effect(() => {
     const mql = window.matchMedia(desktopQuery);
+
+    const closeIfDesktop = () => {
+      if (mql.matches && untrack(() => menuOpen)) setMenuOpen(false);
+    };
 
     closeIfDesktop();
     mql.addEventListener('change', closeIfDesktop);
@@ -58,7 +50,7 @@
 
 <header>
   <a href="#hero" onclick={onLinkClick}>
-    <img src={logo} srcset={logoSet} alt="Los Compits logo" width={100} height={100} decoding="async" />
+    <img src={logo} srcset={logoSet} alt="Los Compits" width={100} height={100} decoding="async" />
   </a>
 
   <nav id="site-nav">
@@ -68,14 +60,14 @@
       {/each}
     </ul>
   </nav>
-  
+
   <div>
     <ColorSchemeToggle />
     <LocaleSelect />
   </div>
 
-  <button 
-    {onclick} 
+  <button
+    {onclick}
     aria-expanded={menuOpen}
     aria-controls="site-nav"
     aria-label={menuOpen ? 'Cerrar el menú de navegación' : 'Abrir el menú de navegación'}
@@ -139,7 +131,7 @@
       a {
         color: var(--shell-header-link);
         transition: color 180ms ease;
-        
+
         &:is(:hover, :focus-visible) {
           color: var(--shell-header-link-hover);
         }

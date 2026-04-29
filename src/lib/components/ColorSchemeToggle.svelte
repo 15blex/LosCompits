@@ -7,9 +7,14 @@
   };
 </script>
 
-<button {onclick} aria-label="Toggle color scheme">
-  <Icon 
-    icon={preferences.colorScheme === "light" ? "mdi:weather-night" : "mdi:white-balance-sunny"} 
+<button
+  {onclick}
+  aria-label={preferences.colorScheme === "light"
+    ? "Activar modo oscuro"
+    : "Activar modo claro"}
+>
+  <Icon
+    icon={preferences.colorScheme === "light" ? "mdi:weather-night" : "mdi:white-balance-sunny"}
     width="24px"
     height="24px"
   />
@@ -23,7 +28,7 @@
     color: var(--shell-header-control);
     transition:
       color 180ms ease;
-   
+
     &:is(:hover, :focus-visible) {
       color: var(--shell-header-control-hover);
     }
